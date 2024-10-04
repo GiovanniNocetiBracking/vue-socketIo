@@ -1,2 +1,1 @@
-pnpm run format:fix
-pnpm run lint-staged --concurrent false
+pnpm lint-staged --concurrent false
