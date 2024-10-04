@@ -66,3 +66,7 @@ Para interactuar con el contador de personas, debes enviar comandos para sumar o
   "mac_address": "{MacAddress/DeviceId/Serial}"
 }
 ```
+
+## Commits
+
+Para poder generar un commit debe cumplir con las reglas de commitLint
