@@ -17,8 +17,7 @@ const ikcountService = {
         mac_address: import.meta.env.VITE_APP_IKCOUNT_MAC_ADDRESS,
       };
       console.log(payload);
-      const response = await ikcount.post('', payload);
-      return response;
+      return await ikcount.post('', payload);
     } catch (error) {
       console.log(error);
     }

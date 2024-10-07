@@ -1,6 +1,16 @@
 <script setup>
 import { useCounterStore } from '@/stores/counter';
+import { onMounted, onBeforeUnmount } from 'vue';
+
 const counterStore = useCounterStore();
+
+onMounted(() => {
+  counterStore.initializeSocket();
+});
+
+onBeforeUnmount(() => {
+  counterStore.cleanupSocket();
+});
 </script>
 
 <template>
@@ -11,6 +21,7 @@ const counterStore = useCounterStore();
       <button @click="counterStore.increment">increment</button>
       <button @click="counterStore.decrement">decrement</button>
     </div>
+    <p>State: {{ counterStore.isConnected ? 'connected' : 'disconected' }}</p>
   </div>
 </template>
 
