@@ -31,11 +31,11 @@ La aplicación debe permitir interactuar con un Backend mediante una **API Rest*
 
 ### 2. **Credenciales**:
 
-- **Usuario**: `giovanni.noceti.demo`
-- **Access Token**: `Z2lvdmFubmkubm9jZXRpLmRlbW86QVBJX0tFWUA0MWZmNGU0Zjc3NDM3MTIyMmY5Zjc2ZmIzYTE3Y2UyMDJjMTgwNzgwZjNkOGZhY2U4YzVlY2M1MTQ2YWI3ODYyNWMyY2M5NTdlNGYyMDQxNTdlMzk1YTg1ZDQyZTY3ODJhNWZlNDljODQ2YzI0YzVhYmJkZTUzM2I4NDE5NDZkYzpJS0xBQjAwNQ==`
-- **Cliente**: `DEMO001`
-- **Ubicación**: `DEMO001A1L1`
-- **MacAddress/DeviceId/Serial**: `DEMO001A1L1Z1MC4`
+- **Usuario**: ``
+- **Access Token**: ``
+- **Cliente**: ``
+- **Ubicación**: ``
+- **MacAddress/DeviceId/Serial**: ``
 
 ---
 
