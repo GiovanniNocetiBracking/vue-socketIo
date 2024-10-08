@@ -69,6 +69,39 @@ Para interactuar con el contador de personas, debes enviar comandos para sumar o
 
 ---
 
-## Commits
+## Instrucciones para Ejecutar el Proyecto
 
-Para poder generar un commit debe cumplir con las reglas de commitLint
+Para ejecutar este proyecto, sigue los pasos a continuación:
+
+1. **Clonar el repositorio**:
+
+```bash
+
+git clone https://github.com/GiovanniNocetiBracking/vue-socketIo.git
+cd <NOMBRE_DEL_DIRECTORIO>
+```
+
+2. **Instalar dependencias**:
+
+Asegúrate de tener pnpm instalado. Si no lo tienes, puedes instalarlo globalmente:
+
+```bash
+
+npm install -g pnpm
+```
+
+Luego, instala las dependencias del proyecto:
+
+```bash
+
+pnpm install
+```
+
+3. **Ejecutar el proyecto**:
+
+Una vez que las dependencias están instaladas, puedes ejecutar el proyecto en modo de desarrollo:
+
+```bash
+
+pnpm dev
+```
