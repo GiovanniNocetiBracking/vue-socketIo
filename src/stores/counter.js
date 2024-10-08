@@ -4,11 +4,9 @@ import ikcountService from '@/services/ikcountService';
 import { socket } from '../utils/ikcountWS';
 
 export const useCounterStore = defineStore('counter', () => {
-  /* ---------------STATE-------------- */
   const count = ref(0);
   const isConnected = ref(false);
 
-  /* ---------------ACTIONS-------------- */
   async function increment() {
     await ikcountService.setCount('manual-add', 1);
   }
@@ -29,8 +27,9 @@ export const useCounterStore = defineStore('counter', () => {
   };
 
   function initializeSocket() {
+    socket.connect();
     socket.on('connect', () => {
-      console.log('Conectado al socket');
+      isConnected.value = true;
     });
     socket.on('welcome', handleWelcome);
     socket.on('raw', handleRaw);
@@ -41,13 +40,13 @@ export const useCounterStore = defineStore('counter', () => {
   }
 
   function cleanupSocket() {
-    // Limpia los eventos al destruir el componente
     socket.off('connect', () => {
-      console.log('Desconectado del socket');
+      isConnected.value = false;
     });
     socket.off('welcome', handleWelcome);
     socket.off('raw', handleRaw);
     socket.off('heartbeat', handleHeartbeat);
+    socket.close();
   }
   return {
     count,

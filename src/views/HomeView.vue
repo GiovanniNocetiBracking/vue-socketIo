@@ -1,7 +1,6 @@
 <script setup>
 import { useCounterStore } from '@/stores/counter';
 import { onMounted, onBeforeUnmount } from 'vue';
-
 const counterStore = useCounterStore();
 
 onMounted(() => {
@@ -14,15 +13,21 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div class="h-screen w-screen flex justify-center items-center flex-col">
-    <h1 class="font-bold text-2xl mb-4">hello world</h1>
-    <h2>counter: {{ counterStore.count }}</h2>
-    <div class="flex space-x-4">
-      <button @click="counterStore.increment">increment</button>
-      <button @click="counterStore.decrement">decrement</button>
+  <div class="h-screen w-full lg:w-[50%] flex justify-center items-center flex-col">
+    <div class="py-10">
+      <div class="text-center">
+        Estado:
+        <span :class="counterStore.isConnected ? 'text-[greenyellow]' : 'text-[#ef4444]'">
+          {{ counterStore.isConnected ? 'Conectado!' : 'Desconectado ' }}
+        </span>
+      </div>
+      <div>
+        <h1 class="text-5xl font-bold text-center">Contador: {{ counterStore.count }}</h1>
+      </div>
     </div>
-    <p>State: {{ counterStore.isConnected ? 'connected' : 'disconected' }}</p>
+    <div class="flex w-full justify-evenly">
+      <button @click="counterStore.decrement"><i class="pi pi-minus"></i></button>
+      <button @click="counterStore.increment"><i class="pi pi-plus"></i></button>
+    </div>
   </div>
 </template>
-
-<style lang="scss" scoped></style>

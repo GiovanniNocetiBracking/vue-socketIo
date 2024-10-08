@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #f6f7f8;
+    --border: 214.3 31.8% 91.4%;
+    --textPrimaryColor: black;
+  }
+
+  .dark {
+    --background: #1d1e26;
+    --border: 217.2 32.6% 17.5%;
+    --textPrimaryColor: white;
+  }
+}
+
+html,
+body {
+  overflow-x: hidden;
+  margin: 0;
+}
+input[type='file']::file-selector-button {
+  display: none;
+}
